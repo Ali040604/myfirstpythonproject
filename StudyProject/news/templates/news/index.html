@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Пользователи</title>
+</head>
+<body>
+    <h1>Список пользователей</h1>
+    <div>
+        {% for i in news %}
+        <a href="{% url 'home'%}{{i.id}}">{{i.name}} {{i.surname}}, {{i.age}}</a>
+            <hr>
+        {% endfor %}
+        <a href="{% url 'add' %}">Добавить пользователей</a>
+    </div>
+</body>
+</html>
